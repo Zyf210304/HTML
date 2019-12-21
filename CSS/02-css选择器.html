@@ -15,6 +15,9 @@
 					*{} 给全部的标签添加相同的样式
 				组合选择器
 					标签名,标签名｛｝
+				子标签选择
+					选择器1 选择器2｛｝
+				
 					
 		 -->
 		<style type="text/css">
@@ -34,7 +37,13 @@
 			table, .commom {
 				background-color: blue;
 			}
-			
+			/*子标签选择器*/
+			ul li a {
+				color: red;
+			}
+			input[type = text] {
+				background-color:  yellow;
+			}
 		</style>
 		
 	</head>
@@ -76,6 +85,15 @@
 				<td></td>
 			</tr>
 		</table>
-		<b class="commom">css 学习</b>
+		<b class="commom">css 学习</b><br>
+		<ul>
+			<li><a href="">哈哈</a></li>
+			<li><a href="">嘿嘿</a></li>
+			<li><a href="">嘻嘻</a></li>
+		</ul>
+		<a href=""> 哼哼</a><br>
+		<input type="text" id="" value="" />
+		<input type="password" name="" />
+		
 	</body>
 </html>
