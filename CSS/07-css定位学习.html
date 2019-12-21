@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css定位学习</title>
+		<!-- 
+			css定位 position
+				相对定位  relative 相对自身原来的位置 其他元素位置是不动的
+				绝对定位  absolute 参照页面(默认) 或者父类元素来进行移动（父类必须使用相对定位）
+				固定定位  fixed
+				
+			z-index 声明元素的显示级别
+		 -->
+		 
+		 <style type="text/css">
+		 	#div01 {
+				border: solid 2px orange;
+				height: 300px;
+				widows: 800px;
+				margin-bottom: 10px;
+				margin-top: 100px;
+			}
+			#showdiv {
+				border: solid 2px;
+				width: 50px;
+				height: 50px;
+				position: absolute;
+				top: 10px;
+			}
+			#div02 {
+				border: dashed 2px blue;
+				height: 300px;
+				widows: 800px;
+				margin-bottom: 10px;
+				position: relative;
+				left: 50px;
+				top: 100px;
+				background-color: blue;
+			}
+			#div03 {
+				border: solid 2px green;
+				height: 300px;
+				widows: 800px;
+			}
+			#div04 {
+				border: solid 2px blue;
+				width: 50px;
+				height: 50px;
+				position: fixed;
+				top: 10px;
+				right: 10px;
+			}
+			
+		 </style>
+		 
+	</head>
+	<body>
+		<div id="div01"> 
+			<div id="showdiv"></div>
+		</div>
+		<div id="div02"> div02</div>
+		<div id="div03"> div03</div>
+		
+		<div id="div04">
+			
+		</div>
+		
+	</body>
+</html>
