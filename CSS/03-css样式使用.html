@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css 的 样式使用</title>
+		
+		<style type="text/css">
+			body {
+				/* 添加背景图片 */
+				background-image: url(../HTML学习/img/hzw01.jpg);
+				background-size: cover;  /*设置平铺*/
+				background-repeat: no-repeat;  /*设置图片不重复*/
+			}
+			table {
+				/* border: solid 1px; */
+				border-radius: 5px;
+			}
+			tr {
+				height: 40px;
+			}
+			td {
+				width : 100px;
+				border: solid 1px #0000FF;
+				border-radius: 3px;
+				background-color: aliceblue;
+				text-align: center;
+				color: red;
+				font-weight: bold;
+				letter-spacing: 5px;  /*文字间距*/
+				font-family: "楷体";
+				/* border-bottom: none; */
+			}
+			
+			/* ================================================== */
+			ul {
+				background-color: gray;
+				height: 50px;
+			}
+			li{
+				list-style-type: none;
+				/* display: inline; */
+				float: left; /*设置左悬浮*/
+				
+			}
+			
+			li a {
+				color:  black;
+				text-decoration: none; /*设置去除下划线*/
+				font-weight: bold;
+				font-size: 20px;
+				margin-left: 20px;
+				position: relative;
+				top: 10px;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<h3>css 的 样式使用</h3>
+		<hr>
+		<table>
+			<tr>
+				<td>姓名</td>
+				<td>性别</td>
+				<td>爱好</td>
+			</tr>
+			<tr>
+				<td>张三</td>
+				<td>男</td>
+				<td>唱歌</td>
+			</tr>
+			<tr>
+				<td>李四</td>
+				<td>男</td>
+				<td>尬舞</td>
+			</tr>
+		</table>
+		<hr>
+		<ul>
+			<li><a href="">首页</a></li>
+			<li><a href="">HTML</a></li>
+			<li><a href="">JAVA</a></li>
+			<li><a href="">JS</a></li>
+		</ul>
+	</body>
+</html>
