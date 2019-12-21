@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css 声明学习</title>
+		<!-- css 声明学习
+			1.head标签中使用style 声明
+				作用 声明当前网页的公共样式或者给某个单独样式
+			2.在标签上的style声明
+				制作用于当前
+			3.head 标签中使用link标签引入外部声明好的css
+				作用解决不同网页样式重复使用问题
+				
+			问题：不同的声明给同一个标签操作同一个样式
+				代码自上而下的执行顺序
+		 -->
+		<style type="text/css">
+			hr{
+				width: 50%;
+				height: 20px;
+				color: red;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<h3>css的声明学习</h3>
+		<hr style="background-color: blue">
+		<hr>
+	</body>
+</html>

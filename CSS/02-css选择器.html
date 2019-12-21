@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>css 选择器学习</title>
+		<!-- 
+			css选择器
+				标签选择器
+					使当前网页的所用该标签增加相同的样式
+				id选择器
+					#标签的id  给知道的标签添加样式
+				类选择器
+					.类选择器名  不同标签用相同的样式
+				全部选择器
+					*{} 给全部的标签添加相同的样式
+				组合选择器
+					标签名,标签名｛｝
+					
+		 -->
+		<style type="text/css">
+			table{
+				width: 300px;
+				height: 200px;
+				border: solid 1px;
+				background-color: #FF0000;
+			}
+			#t1{
+				background-color: aqua;
+			}
+			.commom {
+				color: #FF0000;
+			}
+			/*组合选择器*/
+			table, .commom {
+				background-color: blue;
+			}
+			
+		</style>
+		
+	</head>
+	<body>
+		<h3>css的选择器学习</h3>
+		<hr>
+		<hr>
+		<table id="t1" class="commom">
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+			</tr>
+		</table>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<b class="commom">css 学习</b>
+	</body>
+</html>

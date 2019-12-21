@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>form标签学习</title>
+	</head>
+	<body>
+		<h3>form 标签学习</h3>
+		<hr>
+		<!-- 
+			form标签学习
+				收集用户数据 给制定服务器
+				
+				form标签回搜集其标签内部的数据
+				
+				action 搜集的数据提交地址 也就是url
+				
+				method 	get ?隔开 &连接
+						post 隐式提交
+				
+				要提交的表单项必须有name 提交表单项数据为键值对
+				
+				
+			form表单域学习
+				给用户提供可以进行数据书写或者选择的标签
+				
+				text  文本输入
+				submit 提交按钮
+				radio name相同时候是单选  checked默认选中 value 提交数据
+				checkbox 多选框
+				select 下拉框 select里面填写name属性 option 子选项
+				intro 文本域
+				button
+				hidden 隐藏标签
+		 -->
+		
+		<form action="#" method="get">
+			用户名：<input type="text" name="uname" id="" value="" placeholder="请输入用户名"/><br>
+			密码&nbsp;&nbsp;&nbsp;&nbsp;：<input type="password" name="upwd" id="" value="" /><br>
+			性别:男 <input type="radio" name="sex" id="" value="0" checked="checked"> 女 <input type="radio" name="sex" id="" value="1"> <br>
+			爱好：<br>
+				</:br>吃饭<input type="checkbox" name="hobby" id="" value="1" checked="checked" /><br>
+				</:br>睡觉<input type="checkbox" name="hobby" id="" value="2" /><br>
+				</:br>打豆豆<input type="checkbox" name="hobby" id="" value="3" /><br>
+			籍贯：
+				<select name="address">
+					<option value ="1">北京</option>
+					<option value ="2">上海</option>
+					<option value ="3">杭州</option>
+					<option value ="4" selected="selected">漯河</option>
+				</select><br>
+			备注：<br><textarea name="intro" rows="10" cols="30">
+				
+			</textarea><br>
+			普通按钮：<input type="button"  id="" value="普通按钮" /><br>
+			隐藏标签：<input type="hidden" name="推广人" id="" value="1231" /><br>
+			<br><input type="submit" name="" id="" value="登录" />
+		</form>
+		
+	</body>
+</html>
