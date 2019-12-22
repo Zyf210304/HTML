@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js 函数学习二</title>
+		
+		<!-- 
+		 1.函数的执行符（）
+			没有（）相当于变量
+			加上函数就会被执行
+			
+		 2.函数作为实参传递
+		 
+		 -->
+		 
+		<script type="text/javascript">
+			
+			//函数的执行符
+				var test1 = function() {
+					document.write("函数的执行学习");
+					return "js";
+				}
+				document.write("<br \>");
+				document.write(test1());
+			
+			//函数实参的传递
+			// 	function testobj(a) {
+			// 		alert(a);
+			// 		alert(a());
+			// 	}
+			
+			// 	var testParam = function () {
+			// 		alert("我是函数参数")
+			// 	}
+			
+			// 	testobj(testParam);
+				
+			
+			//开发中常用的传递方式
+				document.write("<br \>");
+				function testobj2(fn) { //testobj2 调用的时候 实参必须是函数参数
+					fn();
+				}
+				
+				testobj2(function(){
+					document.write("开发");
+				});
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		<h3>js 函数学习二</h3>
+		<hr >
+	</body>
+</html>

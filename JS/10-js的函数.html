@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js 的 函数学习</title>
+		
+		
+		<!--  
+			js函数学习
+				1.函数的声明
+				2.函数的参数
+				3.函数的返回值
+				
+			js的声明和执行区域是一起的 都是在js的代码域
+			
+			js的函数调用时 参数可以不赋值不会报错 不全部赋值时候 会依次赋值
+			
+			函数返回值 
+				有返回值直接返回 没有返回undefiled
+		-->
+		
+		
+		<script type="text/javascript">
+			//1.声明函数
+				// 方式一
+					function  test1(a1, a2) {
+						alert("函数声明一");
+					}
+				//方式二   此声明表示js函数是作为对象存在的
+					var test2 = new Function("a1","a2","alert('函数声明二')");
+				//方式三
+					var text3 = function(a1,a2) {
+						alert("函数声明3");
+					}
+				
+				//调用函数声明
+					// test1(1,2);
+					// test2(1,2);
+					// alert(test2);
+					// text3(1,2);
+					
+				// 函数参数
+				// function testParam(a1,a2) {
+				// 	alert(a1);
+				// 	alert("函数的形参学习");
+				// }
+				// testParam(1);
+			 
+				//函数的返回值
+				var testReturn = function() {
+					alert("函数返回值");
+					return "js";
+				}
+			 
+				alert(testReturn());
+			 
+			 
+			 
+		</script>
+		
+	</head>
+	
+	<body>
+		<h3>js 的 函数学习</h3>
+	</body>
+	
+	
+</html>
