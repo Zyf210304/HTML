@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>js的声明和引入</title>
+		<!-- 声明js代码域 -->
+		<script type="text/javascript">
+			function inJSF() {
+				alert("内部声明");
+			}
+		</script>
+		<!-- 外部声明 -->
+		<script src="js/myjs.js" type="text/javascript" charset="utf-8"></script>
+		
+	</head>
+	
+	<body>
+		<h3>js 的声明和引入</h3>
+		
+		<input type="button"  id="" value="js内部声明"  onclick="inJSF()" />
+		<input type="button"  value="js外部声明" onclick="outJSF()s" />
+	</body>
+	
+</html>

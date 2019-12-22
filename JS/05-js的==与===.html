@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js 的特殊关系运算符</title>
+		<!-- 
+			等值运算符：==
+				先判断类型 类型一致则直接比较 
+						  类型不一致则先用number()强转后在比较
+			
+			等同运算符：===
+				类型不同直接false
+				类型想同则正常比较
+		 
+			null 和 undefined 对比返回true
+		 -->
+		<script type="text/javascript">
+			
+			var a1 = 1;
+			var a2 = "1";
+			var a3 = true;
+			var a4 = "true";
+			var a5 = "a";
+			var a6 = "a";
+			
+			// alert(a1 == a2); //true
+			// alert(a1 == a3); //true
+			// alert(a1 == a4); //false
+			// alert(a2 == a3); //true
+			// alert(a2 == a4); //false
+			// alert(a5 == a6); //true
+			
+			// alert(a1 === a2); //false
+			// alert(a1 === a3); //false
+			// alert(a1 === a4); //false
+			// alert(a2 === a3); //falses
+			// alert(a2 === a4); //false
+			// alert(a5 === a6); //true
+			
+			
+			// alert(null == undefined);
+			var str = new String("123");
+			var str2 = new String("123");
+			alert(123 == str); //true
+			alert(str2 == str); //false 对象和对象比 s比的地址
+		</script>
+		
+	</head>
+	<body>
+		
+		<h3>js 的特殊关系运算符</h3>
+		<hr>
+		
+	</body>
+</html>

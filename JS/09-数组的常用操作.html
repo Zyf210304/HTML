@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组的常见操作</title>
+		
+		<!-- 
+			数组的操作
+				1.concat 数组的合并 arr.concat(b,c);
+				2.join 数组制定元素拼成字符串
+				3.pop 移除数组最后的元素并返回  shift 移除第一个元素并返回长度
+				4.push  将新元素添加到数组中 并返回数组的长度值  unshift 添加第一个元素并返回长度
+				5.sort 排序
+				7.splise
+		 -->
+		
+		
+		<script type="text/javascript">
+			
+			var arr = [1, "abc", "张三", "123"];
+			
+			var b = ["今天天气不错", "适合自学", "加油"];
+			
+			var c = "js";
+			
+			// 数组合并
+			var d= arr.concat(b,c);
+			document.write(d);
+			document.write("<br \>")
+			document.write(d.length);
+			document.write("<br \>")
+			
+			//数组转换字符串
+			var  e = arr.join("-");
+			document.write(e);
+			document.write("<br \>");
+			
+			//移除数组的最后一个元素并返回
+			var alast = arr.pop();
+			document.write(alast);
+			document.write("<br \>");
+			document.write(arr);
+			document.write("<br \>");
+			var alast = arr.shift();
+			document.write(alast);
+			document.write("<br \>");
+			document.write(arr);
+			document.write("<br \>");
+			
+			//数组的追加
+			var ln = arr.push("新增后");
+			document.write(ln);
+			document.write("<br \>");
+			document.write(arr);
+			document.write("<br \>");
+			var ln = arr.unshift("新增前");
+			document.write(ln);
+			document.write("<br \>");
+			document.write(arr);
+			document.write("<br \>");
+			
+			//数组删除指定位置
+			var arr2 =  arr.splice(2,1)
+			document.write(arr2);
+			document.write("<br \>");
+			
+			
+		</script>
+		
+		
+		
+	</head>
+	<body>
+		<h3>数组的常见操作</h3>
+		<hr>
+	</body>
+</html>
