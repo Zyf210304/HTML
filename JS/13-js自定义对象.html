@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8">
+		<title>js 自定义对象</title>
+		<script src="js/myjs.js" type="text/javascript" charset="utf-8"></script>
+		
+		<!-- 
+			js创建自定义对象
+				用来存储整体数据
+				很多时候没有办法预先知道一个对象应该有哪些属性 所以只能临时的创建一个对象
+					来自定义属性存储数据
+					
+				应用
+					Ajax中使用
+				
+			作用 一般用来存储数据 不会在自定义对象中存储的函数对象
+				
+			js中对象的属性和内容是可以自定义扩充的 不是依赖类的声明的 类是对象公共部分的声明
+					
+		 -->
+		
+		<script type="text/javascript">
+			// 1.创建自定义对象
+				var obj = new Object();
+				obj.name = "张三";
+				obj.age = 23;
+				obj.test = function() {
+					docWriteLn("obj test");
+				}s
+				obj.test2();
+				
+			// 2.
+			
+		</script>
+		
+		
+		
+	</head>
+	
+	<body>
+		<h3>js 自定义对象</h3>
+		<hr>
+	</body>
+	
+</html>

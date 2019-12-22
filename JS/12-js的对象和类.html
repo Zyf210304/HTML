@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js 的 类和对象学习</title>
+		
+		<!-- 
+			类的声明 构造器
+				function 类名(形参1，形参2.....) {
+					this.属性名1 = 形参1；
+					.....
+					this.属性名 = fn;
+				}
+				
+			类的使用
+				var 对象名 = new 类名(实参1,实参2.....)
+				
+				
+		 -->
+		
+		<script src="js/myjs.js" type="text/javascript" charset="utf-8"></script>
+		
+		
+		<script type="text/javascript">
+			//类的声明
+			 function Person(name,age){
+				 this.name = name;
+				 this.age = age;
+				 this.fav = "学习";
+				 // this.test = function(a) {
+					//  alert(a);
+				 // }
+				 // this.prototype.text = function(a) {
+					//  alert(a);
+				 // }
+			 }
+			//使用 prototype   公共资源 声明方法
+			// Person.prototype.test = function(a){docWriteLn(a)};
+			
+			
+			function User(uname, upwd) {
+				this.uname = uname;
+				this.upwd = upwd;
+			}
+			Person.prototype  = new User();
+			User.prototype.testUser = function(){docWriteLn("user test")};
+			//变相继承
+			
+			
+			
+			
+			//类的使用
+			var p1 = new Person("张三", 23);
+			// alert(p1.name);
+			document.write(p1.name);
+			nextLine();
+			docWrite(p1.fav);
+			
+			var p2 = new Person("小明", 22);
+			
+			
+			// docWriteLn(p1.test === p2.test); //true
+			p1.testUser();
+			// p1.test("12");
+			
+		</script>
+		
+		
+		
+		
+	</head>
+	<body>
+		<h3>js 的 类和对象学习</h3>
+		<hr>
+	</body>
+</html>
