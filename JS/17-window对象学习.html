@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>window 对象学习</title>
+		
+		<!-- 
+			BOM浏览器对象模型 规范浏览器对js的语言支持
+			BOM的具体实现是window对象
+			
+			window对象使用学习
+				1.window对象不用new 直接进行使用即可 类似math的使用方式 window关键字可以省略不写
+				2.框体方法
+					alert 警告框 没有返回值
+					confirm 确认框 有返回值 确定true 取消false
+					prompt 提示框 有返回值  有数据返回数据 取消返回null
+				3.定时和间隔执行方法
+					setTimeout(函数对象,事件毫秒)   clearTimeout 终止进程
+					setInterval(函数对象,间隔毫秒)  clearInterval 终止进程
+				4.子窗口方法
+		 -->
+		
+		
+		<script type="text/javascript">
+			// 框体方法
+			//警告框
+			function testAlert() {
+				window.alert("警告框");
+			}
+			//确认框
+			function testConfirm(){
+				var flag = window.confirm("确认框");
+				alert(flag);
+			}
+			//提示框
+			function testPrompt() {
+				var str =  window.prompt("请补充相关信息");
+				alert(str);
+			}
+/* ------------------------------------------------------------------------------------- */
+			
+			// 定时执行
+			function testSetTimeOut() {
+				setTimeout(function(){
+					alert("定时执行");
+				},3000);
+			}
+			//间隔实行
+			var intervalTimer;
+			function testInterval() {
+				intervalTimer = setInterval(function(){
+					alert("定时执行");
+				},2000);
+			}
+			//停止当前定时器的方法
+			function testClearTimeOut() {
+				window.clearInterval(intervalTimer);
+			}
+			
+			
+		</script>
+		
+		
+		
+		
+	</head>
+	<body>
+		
+		<h3>window 对象学习</h3>
+		<hr>
+		<input type="button" name="" id="" value="警告框" onclick="testAlert()" />
+		<input type="button" name="" id="" value="确认框" onclick="testConfirm()" />
+		<input type="button" name="" id="" value="提示框" onclick="testPrompt()" />
+		<hr >
+		<input type="button" name="" id="" value="定时执行" onclick="testSetTimeOut()" />
+		<input type="button" name="" id="" value="间隔执行" onclick="testInterval()" />
+		<input type="button" name="" id="" value="停止间隔执行" onclick="testClearTimeOut()" />
+	</body>
+</html>

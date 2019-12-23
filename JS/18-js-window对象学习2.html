@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>window 对象学习</title>
+		
+		<!-- 
+		 js的window学习对象
+			1.子窗口 方法
+				window.open('子页面相对路径','打开方式','配置');
+				
+				close()只能关闭open()的界面
+			2.子页面调用父页面的函数
+				window.opener.父界面函数();
+		 js的window对象常用属性
+			地址栏属性 location
+				location.href = "新的地址或者路径"
+				location.reload() 刷新
+ 			历史记录属性
+				history.forward();
+				history.back();
+				history.go(index) 跳转到指定的历史记录资源  index= 0 刷新
+			屏幕属性
+				var x = window.screen.width;  //获取屏幕宽度分辨率
+				var y = window.screen.height;
+			浏览器配置属性
+				navigator.userAgent
+			主面板属性(document)
+				
+		 -->
+		 
+		 <script type="text/javascript">
+		 	function testnewWindow(){
+				open('18-son.html','newwindow','height=400, width = 400, top= 500, left = 700, location = no');
+			}
+			function testFather() {
+				location.href = "http://www.baidu.com"
+			}
+			
+			/* ---------------------------------------------------------------------- */
+			// 地址栏 属性学习
+			function testLocation() {
+				location.href = "http://www.baidu.com"
+			}
+			
+			function testReload() {
+				location.reload();
+			}
+			
+			//历史记录
+			function testHistoryForward() {
+				history.forward();
+			}
+			function testHistoryBack() {
+				history.back()();
+			}
+			
+			//屏幕属性学习
+			function testScreen(){
+				var x = window.screen.width;  //获取屏幕宽度分辨率
+				var y = window.screen.height;
+				alert(x + "-"+ y)
+			}
+			//浏览器 配置属性
+			function testNa() {
+				alert(navigator.userAgent);
+			}
+			
+		 </script>
+		 
+		 
+	</head>
+	<body>
+		<h3>	window 对象学习 </h3>
+		<hr>
+		<input type="button" name="" id="" value="测试open"  onclick="testnewWindow()"/>
+		<hr>
+		<input type="button" name="" id="" value="修改地址栏" onclick="testLocation()" />
+		<input type="button" name="" id="" value="刷新界面" onclick="testReload()"/>
+		<hr>
+		<input type="button" name="" id="" value="历史记录前进" onclick="testHistoryForward()" />
+		<hr>
+		<input type="button" name="" id="" value="获取屏幕分辨率" onclick="testScreen()" />
+		<hr>
+		<input type="button" name="" id="" value="测试浏览器配置属性"  onclick="testNa()"/>
+	</body>
+</html>

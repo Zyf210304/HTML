@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>son页面</title>
+		
+		<script type="text/javascript">
+			
+			
+			function testTime() {
+				window.setInterval(function(){
+					var span = document.getElementById("timeSpan");
+					if (span.innerHTML >　1) {
+						span.innerHTML = span.innerHTML - 1;
+					} else{
+						//调用父页面函数
+						window.opener.testFather();
+						close();
+					}
+				},1000);
+			}
+			
+			
+			
+			
+		</script>
+		
+		
+		
+	</head>
+	<body onload="testTime()">
+		<h3>son 页面</h3>
+		<hr>
+		<b>欢迎访问新网站 <span id="timeSpan" style="color:red; font-size: 40px;">5</span>秒后页面关闭</b>
+	</body>
+</html>

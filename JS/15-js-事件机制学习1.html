@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js 事件机制学习1</title>
+		
+		<!-- 
+			js的事件机制
+				当我们的行为满足一定条件后 会触发某类事务的执行
+				主要结合js的函数使用
+				
+			单双击事件 onclick  
+			鼠标事件 onmouseover onmousemove onmouseout
+			键盘事件 onkeyup onkeydown 
+			焦点事件 onfocus 获取焦点 onblur失去焦点
+			页面加载事件 onload 用来初始化页面资源
+			
+			
+			onchange  只有失去焦点的时候才会被触发  select下拉框
+			onload body标签
+			键盘事件  会进行键盘操作的html元素
+			
+			
+			
+			
+			
+			
+			
+			js中添加事件的第一种方式 
+				在html上直接使用事件属性进行添加 属性值为所监听执行的函数
+			js中的事件只有在当前html元素上有效
+			一个Html可以添加多个不同的事件
+			
+			
+			
+			给html添加多事件时 注意事件冲突
+				但双击冲突
+				事件的阻断
+					当事件监听的函数将返回值返回给事件时
+						false 则会阻断当前事件所在html标签的功能
+						true 则继续执行
+			
+			超链接调用js函数
+				<a href="javascript:函数名()">超链接调用js函数</a>
+				
+			
+		 -->
+		
+		<script type="text/javascript">
+			// 单机事件
+			
+			// var showdiv = document.getElementById("showdiv");
+			
+			function testOnclick(){
+				alert("单击事件");
+			}
+			
+			function textOndblClick() {
+				alert("双击事件");
+			}
+			
+			function testOnMouseover(){
+				alert("鼠标悬停事件");
+			}
+			
+			function testOnmouseMove() {
+				alert("鼠标移动");
+			}
+			
+			function testOnmouseout() {
+				alert("鼠标移出");
+			}
+			
+			function  testOnkeyup() {
+				alert("键盘弹起");
+			}
+			
+			function testA(){
+				alert("阻断");
+				return false;
+			}
+			
+			function testHerf() {
+				alert("超链接调用");
+			}
+			
+		</script>
+		
+		<style type="text/css">
+			#showdiv {
+				margin-top: 50px;
+				width: 300px;
+				height: 300px;
+				border:  solid 1px;
+				
+			}
+		</style>
+		
+		
+		
+	</head>
+	<body>
+		
+		<h3>js 事件机制学习1</h3>
+		<hr>
+		
+		<input type="button" name="" id="" value="测试单击"  onclick="testOnclick()" />
+		<input type="button" name="" id="" value="测试双击"  ondblclick="textOndblClick()" />
+		<hr>
+		
+		<div id="showdiv" onmouseout="testOnmouseout()">
+			
+		</div>
+		
+		键盘事件学习
+		<br>
+		<input type="tel" name="" id="" value="" onkeyup="testOnkeyup()" />
+		<hr>
+		焦点获取事件<br>
+		
+		<br><br>
+		事件的阻断<br>
+		<a href="http://www.baidu.com" target="_blank" onclick="return testA()">百度</a>
+		<hr>
+		超链接调用js函数：
+			<a href="javascript:testHerf()">超链接调用js函数</a>
+	</body>
+</html>
