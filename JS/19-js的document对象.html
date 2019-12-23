@@ -2,8 +2,72 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title></title>
+		<title>js 的document对象</title>
+		<!-- 
+		 使用document对象
+			1、获取HTML元素
+				通过id 		  获取的指定元素
+				通过name属性值  获取的数组
+				通过tag
+				通过class
+				
+		 -->
+		 
+		 <script type="text/javascript">
+		 	
+			//直接获取
+			function getUnmmeInputTextById(){
+				var inputName = document.getElementById("uname");
+				alert(inputName);
+			}
+			
+			function getUnmmeInputTextByName(){
+				var fv = document.getElementsByName("fv");
+				alert(fv.length);
+			}
+			function getByTag() {
+				var inputAbout = document.getElementsByTagName("input");
+				alert(inputAbout.length);
+			}
+			//间接获取
+			
+			
+		 </script>
+		 
+		 <style type="text/css">
+		 	#showdiv {
+				border: solid 1px orange;
+				width: 300px;
+				height: 300px;
+			}
+		 </style>
+		 
 	</head>
 	<body>
+		<h3>js 的document对象</h3>
+		<hr>
+		<input type="button" name="" id="" value="通过id获取对象" onclick="getUnmmeInputTextById()"/>
+		<input type="button" name="" id="" value="通过name获取对象" onclick="getUnmmeInputTextByName()"/>
+		<input type="button" name="" id="" value="通过tag获取对象" onclick="getByTag()"/>
+		<hr>
+		<input type="text" name="uname" id="uname" value="" />
+		<br>
+		<input type="checkbox" name="fv" id="" value="" />吃饭
+		<input type="checkbox" name="fv" id="" value="" />睡觉
+		<input type="checkbox" name="fv" id="" value="" />打豆豆
 	</body>
+	<hr>
+	<h3>间接获取</h3><br>
+	
+	<div id="showdiv">
+		<input type="" name="" id="" value="" />
+		<input type="" name="" id="" value="" />
+		<input type="" name="" id="" value="" />
+		<input type="" name="" id="" value="" />
+		<input type="" name="" id="" value="" />
+		<input type="" name="" id="" value="" />
+		<input type="" name="" id="" value="" />
+	</div>
+	
+	
 </html>
