@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title>操作元素的文档结构</title>
+		<!-- 
+			js操作html文档结构
+				增加节点
+				删除节点
+				第一种方式:使用innerHTML
+					div.innerHTML += "内容" 增加节点
+					div.innerHTML = "" 删除所有节点
+					父节点.removeChild(子节点)  删除指定节点
+		 -->
+		 <style type="text/css">
+		 	#showdiv {
+				width: 300px;
+				height: 200px;
+				border: solid 1px;
+			}
+		 </style>
+		
+		<script type="text/javascript">
+			
+			// var i = 1;
+			function testAdd() {
+				var showdiv = document.getElementById("showdiv");
+				
+				showdiv.innerHTML += "<div><input type='file' name='' id='' value=''> <input type='button' name='' id='' value='删除' onclick='delInp(this)' /> <div/>";
+				// i++;
+			}
+			
+			function delInp(deleteBtn) {
+				var showdiv = document.getElementById("showdiv");
+				showdiv.removeChild(deleteBtn.parentNode);
+			}
+			
+			
+			
+		</script>
+		
+		
+		
+		
+	</head>
+	<body>
+		
+		<h2>操作元素的文档结构</h2>
+		<hr>
+		<br>
+		<input type="button" name="" id="" value="继续上传" onclick="testAdd()" />
+		<br><br>
+		<div id="showdiv">
+			<input type="file" name="" id="" value="" />
+			<input type="button" name="" id="" value="删除" />
+			
+		</div>
+		
+	</body>
+</html>

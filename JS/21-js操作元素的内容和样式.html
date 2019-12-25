@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		
+		<meta charset="utf-8">
+		<title> js  操作元素内容学习</title>
+		
+		<style type="text/css">
+			#div01 {
+				width:  300px;
+				height: 200px;
+				border:  solid 1px orange;
+			}
+		</style>
+		
+		<!--  
+			获取元素对象
+			
+				innerHTML 获取所有内容 
+				innerText 获取所有文本内容 不包括标签
+				
+			修改
+				元素对象名.innerHTML = "新的值"    	替换新值
+				元素对象名.innerHTML += "新的值" 		追加新值
+				元素对象名.innerText = "新的值"  会将原本的覆盖 而且标签会被变成普通的文本
+		-->
+		
+		
+		
+		<script type="text/javascript">
+			
+			//获取元素内容
+				function getContext(){
+					var div = document.getElementById("div01");
+					
+					alert(div.innerHTML);
+					
+				}
+			
+			
+			//修改元素内容
+				function updateContext() {
+					var div = document.getElementById("div01");
+					 
+					 div.innerHTML +=  "<br>不抛弃！不放弃！";
+				}
+				
+				function updateContext2() {
+					var div = document.getElementById("div01");
+					 
+					 div.innerText +=  "<br>不抛弃！不放弃！";
+				}
+				
+			
+		</script>
+		
+		
+		
+	</head>
+	<body>
+		
+		<h3>js  操作元素内容学习</h3>
+		<hr>
+		<input type="button" name="" id="" value="获取元素内容 innerHTML" onclick="getContext()" />
+		<input type="button" name="" id="" value="修改元素内容 innerHTML" onclick="updateContext()" />
+		<br>
+		<input type="button" name="" id="" value="修改元素内容 innerText" onclick="updateContext2()" />
+		<br>
+		<div id="div01">
+			<br>
+			加油吧!
+		</div>
+		
+		
+	</body>
+</html>

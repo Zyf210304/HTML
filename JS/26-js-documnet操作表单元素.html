@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>document 操作表单元素</title>
+		
+		<script type="text/javascript">
+			//多选操作
+			function checkSelect(){
+				//获取所有的多选元素对象集合
+					var favs = document.getElementsByName("fav");
+					var chooseArr = new Array();
+					for (var i = 0; i < favs.length; i++) {
+						if (favs[i].checked == true) {
+							chooseArr.push(favs[i].value);
+						} 
+					}
+					var chooseResultDiv = document.getElementById("chooseResult");
+					chooseResultDiv.innerHTML += chooseArr;
+					
+					
+			}
+			
+			function selectAll() {
+				var favs = document.getElementsByName("fav");
+				for (var i = 0; i < favs.length; i++) {
+					favs[i].checked = true
+				}
+			}
+			
+			function testSelect(){
+				//获取下拉对象
+					var sel = document.getElementById("address");
+					// alert(sel.value);
+				//获取option
+					var ops = sel.options;
+					for (var i = 0; i < ops.length; i++) {
+						if(ops[i].selected) {
+							var chooseResultDiv = document.getElementById("chooseResult");
+							chooseResultDiv.innerHTML = "地址选择："  + ops[i].text;
+						}
+					}
+			}
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		<h3>document 操作表单元素</h3>
+		<hr>
+		<b>操作多选框</b><br>
+		<div id="chooseResult">
+			
+		</div><br>
+		
+		<input type="checkbox" name="fav" id="fav" value="1" />远走高飞<br>
+		<input type="checkbox" name="fav" id="fav" value="2" />当<br>
+		<input type="checkbox" name="fav" id="fav" value="3" />李白<br>
+		<input type="checkbox" name="fav" id="fav" value="4" />杜甫<br>
+		<input type="checkbox" name="fav" id="fav" value="5" />We&nbsp;are <br>
+		<input type="checkbox" name="fav" id="fav" value="6" />fade <br>
+		<input type="button" name="" id="" value="播放" onclick="checkSelect()" />
+		<input type="button" name="" id="" value="全选" onclick="selectAll()" />
+		
+		<hr>
+		<select id = "address" onchange="testSelect()">
+			<option value ="-1">---请选择---</option>
+			<option value ="0">北京</option>
+			<option value ="1">上海</option>
+			<option value ="2">广州</option>
+			
+		</select>
+		
+		
+	</body>
+</html>

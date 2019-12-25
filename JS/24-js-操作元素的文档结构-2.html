@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>操作元素的文档结构</title>
+		
+		<script type="text/javascript">
+			
+			function testOper2() {
+				var showdiv = document.getElementById("showdiv");
+				//创建input
+				var inp =  document.createElement("input");
+				inp.type = "file";
+				//创建删除按钮
+				var btn =  document.createElement("input");
+				btn.type = "button";
+				btn.value = "删除";
+				
+				var br = document.createElement("br");
+				
+				btn.onclick = function() {
+					showdiv.removeChild(inp);
+					showdiv.removeChild(btn);
+					showdiv.removeChild(br);
+				}
+				
+				
+				
+				//将常见的元素对象放到div中
+				showdiv.appendChild(inp);
+				showdiv.appendChild(btn);
+				showdiv.appendChild(br);
+				
+				
+			}
+			
+			function delInp(deleteBtn) {
+				var showdiv = document.getElementById("showdiv");
+				showdiv.removeChild(deleteBtn.parentNode);
+			}
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		<h2>操作元素的文档结构</h2>
+		<hr>
+		<br>
+		<input type="button" name="" id="" value="继续上传" onclick="testOper2()" />
+		<br><br>
+		<div id="showdiv">
+			<input type="file" name="" id="" value="" /><br>
+			
+		</div>
+		
+	</body>
+</html>

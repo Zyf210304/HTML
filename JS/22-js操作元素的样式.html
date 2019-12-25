@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>js 操作元素的样式</title>
+		
+		<style type="text/css">
+			
+			#showdiv {
+				width: 200px;
+				height: 200px;
+				border: solid 1px;
+			}
+			
+			.commom {
+				width: 200px;
+				height: 200px;
+				border: solid 1px;
+			}
+			
+			.commom2 {
+				width: 200px;
+				height: 200px;
+				border: solid 1px;
+				background-color: #00FFFF;
+			}
+			
+		</style>
+		
+		<!-- 
+		
+			通过税style属性
+				修改操作修改的是HTML的Style属性里面声明的样式 而不是css代码中的样式
+			
+			通过class属性
+				
+		 
+		 
+		 -->
+		
+		<script type="text/javascript">
+			//js 操作元素样式  style
+				//添加 
+					function testAddCss() {
+						var showdiv = document.getElementById("showdiv");
+						showdiv.style.backgroundColor = "orange";
+					}
+				//修改
+					function testUpdate() {
+						var showdiv = document.getElementById("showdiv");
+						showdiv.style.border = "solid 2px red";
+					}
+				//删除
+					function testDeletedCss() {
+						var showdiv = document.getElementById("showdiv");
+						showdiv.style.border = "";
+					}
+					
+			//js 操作元素样式  classname
+				
+				function testOperCss2() {
+					var div01 = document.getElementById("div01");
+					
+					div01.className = "commom2";
+				}
+					
+				
+		</script>
+		
+		
+	</head>
+	
+	<body>
+		<h3>js 操作元素的样式</h3>
+		<input type="button" name="" id="" value="添加样式 背景颜色"  onclick="testAddCss()"/>
+		<input type="button" name="" id="" value="修改样式 border"  onclick="testUpdate()"/>
+		<input type="button" name="" id="" value="删除样式 border"  onclick="testDeletedCss()"/>
+		<br>
+		<input type="button" name="" id="" value="修改样式 classname"  onclick="testOperCss2()"/>
+		<br><br>
+		<div id="showdiv">
+			
+		</div>
+		<br>
+		<div id="div01" class="commom">
+			
+		</div>
+		
+	</body>
+	
+	
+</html>

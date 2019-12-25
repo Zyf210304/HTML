@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>操作form表单</title>
+		
+		<!-- 
+			js操作form表单
+				获取form表单对象
+					使用id
+					使用name  document.frm
+				
+				获取form表单下的所有元素对象
+					fm.elements
+				form表单的常用方法
+					fm.submit(); 表单对象的提交
+					fm.reset();
+					fm.action = "http://www.baidu.com/s";
+					
+			js 表单元素的通用属性
+				readonly 只看不写 可以提交
+				disabled 相当于关闭 不可以进行操作 数据不会提交
+		 -->
+		
+		<script type="text/javascript">
+			
+			function testForm() {
+				var fm = document.getElementById("fm");
+				// alert(fm);
+				
+				// var frm = document.frm;
+				// alert(frm);
+				// alert(fm.elements.length)
+				// fm.submit(); fm.reset();
+				
+				//form 属性操作
+				// fm.action = "http://www.baidu.com/s";
+				
+			}
+			
+			
+			
+		</script>
+		
+		
+	</head>
+	<body>
+		<h3>操作form表单</h3>
+		<br>
+		<input type="button" name="" id="" value="测试操作form" onclick="testForm()" />
+		<hr>
+		
+		<form action="" method="post" id="fm" name="frm">
+			用户名:<input type="text" name="uname" id="uname" value="飞飞" readonly="readonly" /><br>
+			密码&nbsp&nbsp&nbsp&nbsp:<input type="password" name="pwd" id="pwd" disabled="disabled"/><br>
+			<input type="submit" name="" id="" value="登录" />
+		</form>
+		
+	</body>
+</html>
