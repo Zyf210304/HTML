@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>table 操作</title>
+		
+		<!-- 
+			js table操作
+				1.删除行
+					行对象.rowIndex
+					表格对象 deleteRow(受删除对象的角标);
+				
+					
+		 -->
+		<style type="text/css">
+			body {
+				text-align: center;
+			}
+			//设置表格居中
+			#ta {
+				margin:100px auto;
+			}
+			#ta tr {
+				height: 35px;
+			}
+		</style>
+
+	<script type="text/javascript">
+		function delRow(btn) {
+			//获取table对象
+			var ta = document.getElementById("ta");
+			
+			var tr = btn.parentNode.parentNode;
+			
+			//删除行
+			ta.deleteRow(tr.rowIndex);
+		}
+		
+		function updateRow(btn) {
+			var ta = document.getElementById("ta");
+			var tr = btn.parentNode.parentNode;
+			var cell = tr.cells[4];
+			
+			if(!isNaN(Number(cell.innerHTML))) {
+				cell.innerHTML = "<input type='text' name='' value='"+cell.innerHTML+"' onblur='updateRow2(this)'/>";
+			
+			}
+		}
+		
+		function updateRow2(inp){
+			// var ta = document.getElementById("ta");
+			var cell = inp.parentNode;
+			// var cell = tr.cells[4];
+			// alert(123);
+			// cell.innerHTML = inp.value;
+			cell.innerHTML = inp.value;
+			
+		}
+		
+		//选择删除
+		function chooseDel() {
+			var ta = document.getElementById("ta");
+			var chks = document.getElementsByName("chk");
+			for (var i = 0; i < chks.length; i++) {
+				if(chks[i].checked)  {
+					ta.deleteRow(i);
+					i--;
+				}
+			}
+		}
+		
+		//添加行
+		function addRow(){
+			var ta = document.getElementById("ta");
+			var tr = ta.insertRow(1);
+			var cell0 = tr.insertCell(0);
+			cell0.innerHTML = "<input type='checkbox' name='chk'/>";
+			var cell1 = tr.insertCell(1);
+			cell1.innerHTML = "世界名著A";
+			var cell2 = tr.insertCell(2);
+			cell2.innerHTML = "佚名";
+			var cell3 = tr.insertCell(3);
+			cell3.innerHTML = "98.8";
+			var cell4 = tr.insertCell(4);
+			cell4.innerHTML = "123";
+			var cell5 = tr.insertCell(5);
+			cell5.style.textAlign = "center";
+			cell5.innerHTML = "<input type='button' name='' id='' value='修改数量' /><input type='button' name='' id='' value='删除' onclick= 'delRow(this)'/>"
+		}
+		
+		//复制行
+		function copyRow(){
+			var ta = document.getElementById("ta");
+			
+			//复制行
+			var chks = document.getElementsByName("chk");
+			for (var i = 0; i < chks.length; i++) {
+				if(chks[i].checked)  {
+					var tr = ta.insertRow(ta.rows.length);
+					tr.innerHTML = ta.rows[i].innerHTML;
+				}
+			}
+		}
+		
+		
+	</script>
+		
+	</head>
+	<body >
+		<h3 align="center"></h3>
+		<input type="button" name="" id="" value="删除"  onclick="chooseDel()"/>
+		<input type="button" name="" id="" value="添加行" onclick="addRow()"/>
+		<input type="button" name="" id="" value="复制行" onclick="copyRow()"/>
+		<hr>
+		<table border="1px" id="ta">
+			<tr align="center" style="font-weight: bold;">
+				<td><input type="checkbox" name="chk" id="0" value="" /></td>
+				<td width="200px">书名</td>
+				<td width="100px">作者</td>
+				<td width="100px">价格</td>
+				<td width="100px">数量</td>
+				<td width="200px">操作</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="chk" id="1" value="" /></td>
+				<td>JAVA从入门到放弃</td>
+				<td>wollo</td>
+				<td>43.0</td>
+				<td>3</td>
+				<td>
+					<input type="button" name="" id="" value="修改数量" onclick="updateRow(this)"/>
+					<input type="button" name="" id="" value="删除" onclick="delRow(this)"/>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="chk" id="2" value="" /></td>
+				<td>三国演义</td>
+				<td>罗贯中</td>
+				<td>35</td>
+				<td>100</td>
+				<td>
+					<input type="button" name="" id="" value="修改数量" onclick="updateRow(this)"/>
+					<input type="button" name="" id="" value="删除" onclick="delRow(this)"/>
+				</td>
+			</tr>
+			<tr>
+				<td><input type="checkbox" name="chk" id="3" value="" /></td>
+				<td>红楼梦</td>
+				<td>曹雪芹</td>
+				<td>40</td>
+				<td>999</td>
+				<td>
+					<input type="button" name="" id="" value="修改数量" onclick="updateRow(this)"/>
+					<input type="button" name="" id="" value="删除" onclick="delRow(this)" />
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
